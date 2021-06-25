@@ -1,6 +1,9 @@
 module Main where
 
-import Lib
+import           Lib
+import           System.IO (BufferMode (LineBuffering), hSetBuffering, stdout)
 
 main :: IO ()
-main = startApp
+main = do
+  hSetBuffering stdout LineBuffering
+  startApp

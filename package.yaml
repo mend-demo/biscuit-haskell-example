@@ -25,6 +25,9 @@ dependencies:
 - wai
 - warp
 - biscuit-haskell
+- text
+- bytestring
+- mtl
 
 library:
   source-dirs: src
