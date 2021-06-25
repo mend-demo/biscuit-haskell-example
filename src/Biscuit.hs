@@ -59,5 +59,6 @@ checkBiscuit :: CheckedBiscuit
 checkBiscuit (CheckedBiscuit pk b) v h = do
   res <- liftIO $ verifyBiscuit b v pk
   case res of
-    Left e  -> throwError $ err401 { errBody = "Biscuit failed checks" }
+    Left e  -> do liftIO $ print e
+                  throwError $ err401 { errBody = "Biscuit failed checks" }
     Right _ -> h
