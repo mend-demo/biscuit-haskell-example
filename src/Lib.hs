@@ -28,9 +28,12 @@ $(deriveJSON defaultOptions ''User)
 
 startApp :: IO ()
 startApp = do
-  kp <- newKeypair
-  print (publicKey kp)
+  -- a regular service would only need the _public_ key to check biscuits, but
+  -- for convenience here we generate a biscuit when starting the app
+  Just privateKey <- parsePrivateKeyHex . pack <$> getEnv "BISCUIT_PRIVATE_KEY"
+  kp <- fromPrivateKey privateKey
   b <- mkBiscuit kp [block|right(#authority,#userList);|]
+  putStrLn "Here's a biscuit granting access to the user list"
   print (serializeHex b)
 
   let pk = publicKey kp
