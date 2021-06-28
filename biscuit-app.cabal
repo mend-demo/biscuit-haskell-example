@@ -24,7 +24,6 @@ source-repository head
 
 library
   exposed-modules:
-      Biscuit
       Lib
   other-modules:
       Paths_biscuit_app
@@ -34,6 +33,7 @@ library
       aeson
     , base >=4.7 && <5
     , biscuit-haskell
+    , biscuit-servant
     , bytestring
     , mtl
     , servant-server
@@ -54,6 +54,7 @@ executable biscuit-app-exe
     , base
     , biscuit-app
     , biscuit-haskell
+    , biscuit-servant
     , bytestring
     , mtl
     , servant-server
@@ -75,6 +76,7 @@ test-suite biscuit-app-test
     , base
     , biscuit-app
     , biscuit-haskell
+    , biscuit-servant
     , bytestring
     , hspec
     , hspec-wai

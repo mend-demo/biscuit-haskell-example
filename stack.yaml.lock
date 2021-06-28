@@ -12,12 +12,19 @@ packages:
   original:
     hackage: libsodium-1.0.18.1@sha256:718a99126c2ffc292da602a3da570e6772c94d5240ff120f6a17fe623db3ca8e,1020
 - completed:
-    hackage: biscuit-haskell-0.1.0.0@sha256:55bfff048af05d19b1d35c2ad41723773b666e2150c84366428b42677046150d,3337
+    hackage: biscuit-haskell-0.1.1.0@sha256:8fa0575f00dcc31cc4b391f275b39ba26062b1c2fab168b590f3a5087d50561f,3337
     pantry-tree:
       size: 1623
-      sha256: f6e526c7874abefe616d3ba4841d75e753b03e5c1684682c63d5aeb2b330b271
+      sha256: 74f54ebf431c7c86ced505c8f38def451361d354dd71de753bcae914a7c8efe9
   original:
-    hackage: biscuit-haskell-0.1.0.0
+    hackage: biscuit-haskell-0.1.1.0
+- completed:
+    hackage: biscuit-servant-0.1.1.0@sha256:dcc4771f75998dfc2e2c9e643ef7c967eb52f282c08bd0b46615d82ca06790bf,1710
+    pantry-tree:
+      size: 504
+      sha256: a47fa8e3a22bbaf59a40ea998994e463efdbc19d0ab54b69a22f078471898de3
+  original:
+    hackage: biscuit-servant-0.1.1.0
 snapshots:
 - completed:
     size: 567241

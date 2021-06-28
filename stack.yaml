@@ -42,7 +42,8 @@ packages:
 # extra-deps: []
 extra-deps:
   - libsodium-1.0.18.1@sha256:718a99126c2ffc292da602a3da570e6772c94d5240ff120f6a17fe623db3ca8e,1020
-  - biscuit-haskell-0.1.0.0
+  - biscuit-haskell-0.1.1.0
+  - biscuit-servant-0.1.1.0
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
