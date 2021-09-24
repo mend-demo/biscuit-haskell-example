@@ -31,13 +31,12 @@ startApp :: IO ()
 startApp = do
   -- a regular service would only need the _public_ key to check biscuits, but
   -- for convenience here we generate a biscuit when starting the app
-  Just privateKey <- parsePrivateKeyHex . pack <$> getEnv "BISCUIT_PRIVATE_KEY"
-  kp <- fromPrivateKey privateKey
-  b <- mkBiscuit kp [block|right(#authority,#userList);|]
+  Just sk <- parseSecretKeyHex . pack <$> getEnv "BISCUIT_SECRET_KEY"
+  let pk = toPublic sk
+  b <- mkBiscuit sk [block|right("userList");|]
   putStrLn "Here's a biscuit granting access to the user list"
-  print (serializeHex b)
+  print (serializeB64 b)
 
-  let pk = publicKey kp
   -- Just pk <- parsePublicKeyHex . pack <$> getEnv "BISCUIT_PUBLIC_KEY"
   run 8080 (app pk)
 
@@ -60,7 +59,7 @@ server b =
       handleAuth = handleBiscuit b
                  -- `allow if right(#authority, #admin);` will be the first policy for every endpoint
                  -- policies added by endpoints (or sub-apis) will be appended
-                 . withPriorityVerifier [verifier|allow if right(#authority, #admin);|]
+                 . withPriorityVerifier [verifier|allow if right("admin");|]
                  -- `deny if true;` will be the last policy for every endpoint
                  -- policies added by endpoints (or sub-apis) will be prepended
                  . withFallbackVerifier [verifier|deny if true;|]
@@ -72,10 +71,10 @@ allUsers = [ User 1 "Isaac" "Newton"
            ]
 
 userListHandler :: APIHandler [User]
-userListHandler = withVerifier [verifier|allow if right(#authority, #userList);|] $
+userListHandler = withVerifier [verifier|allow if right("userList");|] $
   pure allUsers
 
 singleUserHandler :: Int -> APIHandler User
-singleUserHandler uid = withVerifier [verifier|allow if right(#authority, #getUser, ${uid});|]$
+singleUserHandler uid = withVerifier [verifier|allow if right("getUser", ${uid});|]$
   let user = find ((== uid) . userId) allUsers
    in maybe (throwError err404) pure user

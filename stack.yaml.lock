@@ -12,19 +12,31 @@ packages:
   original:
     hackage: libsodium-1.0.18.1@sha256:718a99126c2ffc292da602a3da570e6772c94d5240ff120f6a17fe623db3ca8e,1020
 - completed:
-    hackage: biscuit-haskell-0.1.1.0@sha256:8fa0575f00dcc31cc4b391f275b39ba26062b1c2fab168b590f3a5087d50561f,3337
+    subdir: biscuit
+    name: biscuit-haskell
+    version: 0.2.0.0
+    git: https://github.com/divarvel/biscuit-haskell.git
     pantry-tree:
-      size: 1623
-      sha256: 74f54ebf431c7c86ced505c8f38def451361d354dd71de753bcae914a7c8efe9
+      size: 5116
+      sha256: 62265fd3c650399a56b2b49e91b0ff1a670532e29812b191e864cea317c40d64
+    commit: ca21ad6b22b8f19d38ea5cfa25509228a6c5107c
   original:
-    hackage: biscuit-haskell-0.1.1.0
+    subdir: biscuit
+    git: https://github.com/divarvel/biscuit-haskell.git
+    commit: ca21ad6b22b8f19d38ea5cfa25509228a6c5107c
 - completed:
-    hackage: biscuit-servant-0.1.1.0@sha256:dcc4771f75998dfc2e2c9e643ef7c967eb52f282c08bd0b46615d82ca06790bf,1710
+    subdir: biscuit-servant
+    name: biscuit-servant
+    version: 0.2.0.0
+    git: https://github.com/divarvel/biscuit-haskell.git
     pantry-tree:
-      size: 504
-      sha256: a47fa8e3a22bbaf59a40ea998994e463efdbc19d0ab54b69a22f078471898de3
+      size: 554
+      sha256: a398a54b73deafc59bfa184173925c441022ebab284d56d0c2e1daf85863e3c8
+    commit: ca21ad6b22b8f19d38ea5cfa25509228a6c5107c
   original:
-    hackage: biscuit-servant-0.1.1.0
+    subdir: biscuit-servant
+    git: https://github.com/divarvel/biscuit-haskell.git
+    commit: ca21ad6b22b8f19d38ea5cfa25509228a6c5107c
 snapshots:
 - completed:
     size: 567241
