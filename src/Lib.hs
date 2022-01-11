@@ -40,7 +40,7 @@ startApp = do
   -- Just pk <- parsePublicKeyHex . pack <$> getEnv "BISCUIT_PUBLIC_KEY"
   run 8080 (app pk)
 
-type APIHandler = WithVerifier Handler
+type APIHandler = WithAuthorizer Handler
 
 type API = RequireBiscuit :> ProtectedAPI
 
@@ -59,10 +59,10 @@ server b =
       handleAuth = handleBiscuit b
                  -- `allow if right(#authority, #admin);` will be the first policy for every endpoint
                  -- policies added by endpoints (or sub-apis) will be appended
-                 . withPriorityVerifier [verifier|allow if right("admin");|]
+                 . withPriorityAuthorizer [authorizer|allow if right("admin");|]
                  -- `deny if true;` will be the last policy for every endpoint
                  -- policies added by endpoints (or sub-apis) will be prepended
-                 . withFallbackVerifier [verifier|deny if true;|]
+                 . withFallbackAuthorizer [authorizer|deny if true;|]
    in hoistServer @ProtectedAPI Proxy handleAuth handlers
 
 allUsers :: [User]
@@ -71,10 +71,10 @@ allUsers = [ User 1 "Isaac" "Newton"
            ]
 
 userListHandler :: APIHandler [User]
-userListHandler = withVerifier [verifier|allow if right("userList");|] $
+userListHandler = withAuthorizer [authorizer|allow if right("userList");|] $
   pure allUsers
 
 singleUserHandler :: Int -> APIHandler User
-singleUserHandler uid = withVerifier [verifier|allow if right("getUser", ${uid});|]$
+singleUserHandler uid = withAuthorizer [authorizer|allow if right("getUser", ${uid});|]$
   let user = find ((== uid) . userId) allUsers
    in maybe (throwError err404) pure user

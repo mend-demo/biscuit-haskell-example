@@ -5,41 +5,34 @@
 
 packages:
 - completed:
-    hackage: libsodium-1.0.18.1@sha256:718a99126c2ffc292da602a3da570e6772c94d5240ff120f6a17fe623db3ca8e,1020
-    pantry-tree:
-      size: 387
-      sha256: de3b8b57d48e5ff53db4ec5d742f1b56e4979f709a59582798b979b32b222a80
-  original:
-    hackage: libsodium-1.0.18.1@sha256:718a99126c2ffc292da602a3da570e6772c94d5240ff120f6a17fe623db3ca8e,1020
-- completed:
     subdir: biscuit
     name: biscuit-haskell
     version: 0.2.0.0
     git: https://github.com/divarvel/biscuit-haskell.git
     pantry-tree:
-      size: 5116
-      sha256: 62265fd3c650399a56b2b49e91b0ff1a670532e29812b191e864cea317c40d64
-    commit: ca21ad6b22b8f19d38ea5cfa25509228a6c5107c
+      size: 3799
+      sha256: 112f472dfd570514e43e6c6298622a4559bbb4bf36f7120dbe72c352b13e17de
+    commit: fc0a94342ff80d046fff58c8fcd352211f57dd44
   original:
     subdir: biscuit
     git: https://github.com/divarvel/biscuit-haskell.git
-    commit: ca21ad6b22b8f19d38ea5cfa25509228a6c5107c
+    commit: fc0a94342ff80d046fff58c8fcd352211f57dd44
 - completed:
     subdir: biscuit-servant
     name: biscuit-servant
     version: 0.2.0.0
     git: https://github.com/divarvel/biscuit-haskell.git
     pantry-tree:
-      size: 554
-      sha256: a398a54b73deafc59bfa184173925c441022ebab284d56d0c2e1daf85863e3c8
-    commit: ca21ad6b22b8f19d38ea5cfa25509228a6c5107c
+      size: 556
+      sha256: 99aef2e812f2f6e9f3252baeccde2a0026de92e2b748639bcd3c3d4a04910d9a
+    commit: fc0a94342ff80d046fff58c8fcd352211f57dd44
   original:
     subdir: biscuit-servant
     git: https://github.com/divarvel/biscuit-haskell.git
-    commit: ca21ad6b22b8f19d38ea5cfa25509228a6c5107c
+    commit: fc0a94342ff80d046fff58c8fcd352211f57dd44
 snapshots:
 - completed:
-    size: 567241
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/10.yaml
-    sha256: 321b3b9f0c7f76994b39e0dabafdc76478274b4ff74cc5e43d410897a335ad3b
-  original: lts-17.10
+    size: 586110
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/18/21.yaml
+    sha256: ce4fb8d44f3c6c6032060a02e0ebb1bd29937c9a70101c1517b92a87d9515160
+  original: lts-18.21

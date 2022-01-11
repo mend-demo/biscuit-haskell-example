@@ -17,7 +17,7 @@
 #
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
-resolver: lts-17.10
+resolver: lts-18.21
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -41,9 +41,8 @@ packages:
 #
 # extra-deps: []
 extra-deps:
-  - libsodium-1.0.18.1@sha256:718a99126c2ffc292da602a3da570e6772c94d5240ff120f6a17fe623db3ca8e,1020
   - git: https://github.com/divarvel/biscuit-haskell.git
-    commit: ca21ad6b22b8f19d38ea5cfa25509228a6c5107c
+    commit: fc0a94342ff80d046fff58c8fcd352211f57dd44
     subdirs:
       - biscuit
       - biscuit-servant
