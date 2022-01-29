@@ -5,31 +5,19 @@
 
 packages:
 - completed:
-    subdir: biscuit
-    name: biscuit-haskell
-    version: 0.2.0.0
-    git: https://github.com/divarvel/biscuit-haskell.git
+    hackage: biscuit-haskell-0.2.0.1@sha256:5ff20072f9ac4e902f7302bb397fb775cbeecffe3822c313997a91e17c52a9b7,3186
     pantry-tree:
-      size: 3799
-      sha256: 112f472dfd570514e43e6c6298622a4559bbb4bf36f7120dbe72c352b13e17de
-    commit: fc0a94342ff80d046fff58c8fcd352211f57dd44
+      size: 1799
+      sha256: 92483b51e6503193e1aa8f98ada48e269a1d284edbc92dcada17ed9700c2c9e5
   original:
-    subdir: biscuit
-    git: https://github.com/divarvel/biscuit-haskell.git
-    commit: fc0a94342ff80d046fff58c8fcd352211f57dd44
+    hackage: biscuit-haskell-0.2.0.1@sha256:5ff20072f9ac4e902f7302bb397fb775cbeecffe3822c313997a91e17c52a9b7,3186
 - completed:
-    subdir: biscuit-servant
-    name: biscuit-servant
-    version: 0.2.0.0
-    git: https://github.com/divarvel/biscuit-haskell.git
+    hackage: biscuit-servant-0.2.0.1@sha256:8ac4666e0c7184a8feb1e31fd6251efd439b6ec74cd024bb0be35c0eaa88b6bb,1723
     pantry-tree:
-      size: 556
-      sha256: 99aef2e812f2f6e9f3252baeccde2a0026de92e2b748639bcd3c3d4a04910d9a
-    commit: fc0a94342ff80d046fff58c8fcd352211f57dd44
+      size: 509
+      sha256: 9bcb6e07ed0db108166226a2f0a29327d52aec1d85e4ae2fb8e5dc80905173e6
   original:
-    subdir: biscuit-servant
-    git: https://github.com/divarvel/biscuit-haskell.git
-    commit: fc0a94342ff80d046fff58c8fcd352211f57dd44
+    hackage: biscuit-servant-0.2.0.1@sha256:8ac4666e0c7184a8feb1e31fd6251efd439b6ec74cd024bb0be35c0eaa88b6bb,1723
 snapshots:
 - completed:
     size: 586110
