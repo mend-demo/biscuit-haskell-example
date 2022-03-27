@@ -40,11 +40,8 @@ packages:
 #
 # extra-deps: []
 extra-deps:
-  - git: https://github.com/biscuit-auth/biscuit-haskell.git
-    commit: 5c41a9b0b85b53962bdc33402af77f8c08fd1aa7
-    subdirs:
-      - biscuit
-      - biscuit-servant
+  - biscuit-haskell-0.2.1.0
+  - biscuit-servant-0.2.1.0
   - validation-selective-0.1.0.1
   - selective-0.4.2@sha256:d223434ba4545a09b02dbdc7a4d63bd41ef40cc3d3d82883ccc6daea9d2b2dd5,3507
 
