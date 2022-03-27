@@ -16,7 +16,7 @@
 #
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
-resolver: lts-18.21
+resolver: lts-19.0
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -40,8 +40,13 @@ packages:
 #
 # extra-deps: []
 extra-deps:
-  - biscuit-haskell-0.2.0.1@sha256:5ff20072f9ac4e902f7302bb397fb775cbeecffe3822c313997a91e17c52a9b7,3186
-  - biscuit-servant-0.2.0.1@sha256:8ac4666e0c7184a8feb1e31fd6251efd439b6ec74cd024bb0be35c0eaa88b6bb,1723
+  - git: https://github.com/biscuit-auth/biscuit-haskell.git
+    commit: 5c41a9b0b85b53962bdc33402af77f8c08fd1aa7
+    subdirs:
+      - biscuit
+      - biscuit-servant
+  - validation-selective-0.1.0.1
+  - selective-0.4.2@sha256:d223434ba4545a09b02dbdc7a4d63bd41ef40cc3d3d82883ccc6daea9d2b2dd5,3507
 
 # Override default flag values for local packages and extra-deps
 # flags: {}

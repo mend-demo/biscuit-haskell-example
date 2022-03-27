@@ -5,22 +5,48 @@
 
 packages:
 - completed:
-    hackage: biscuit-haskell-0.2.0.1@sha256:5ff20072f9ac4e902f7302bb397fb775cbeecffe3822c313997a91e17c52a9b7,3186
+    subdir: biscuit
+    name: biscuit-haskell
+    version: 0.2.0.1
+    git: https://github.com/biscuit-auth/biscuit-haskell.git
     pantry-tree:
-      size: 1799
-      sha256: 92483b51e6503193e1aa8f98ada48e269a1d284edbc92dcada17ed9700c2c9e5
+      size: 3913
+      sha256: 02d58ded4ae1bc9d05ad468b3933f036256803e79754063902d8d89a21d1a34a
+    commit: 5c41a9b0b85b53962bdc33402af77f8c08fd1aa7
   original:
-    hackage: biscuit-haskell-0.2.0.1@sha256:5ff20072f9ac4e902f7302bb397fb775cbeecffe3822c313997a91e17c52a9b7,3186
+    subdir: biscuit
+    git: https://github.com/biscuit-auth/biscuit-haskell.git
+    commit: 5c41a9b0b85b53962bdc33402af77f8c08fd1aa7
 - completed:
-    hackage: biscuit-servant-0.2.0.1@sha256:8ac4666e0c7184a8feb1e31fd6251efd439b6ec74cd024bb0be35c0eaa88b6bb,1723
+    subdir: biscuit-servant
+    name: biscuit-servant
+    version: 0.2.0.1
+    git: https://github.com/biscuit-auth/biscuit-haskell.git
     pantry-tree:
-      size: 509
-      sha256: 9bcb6e07ed0db108166226a2f0a29327d52aec1d85e4ae2fb8e5dc80905173e6
+      size: 556
+      sha256: 1cb1a848343196a28206d10aebbf32a8a1913ae5abc3933b5fa89ea9b4cde6a7
+    commit: 5c41a9b0b85b53962bdc33402af77f8c08fd1aa7
   original:
-    hackage: biscuit-servant-0.2.0.1@sha256:8ac4666e0c7184a8feb1e31fd6251efd439b6ec74cd024bb0be35c0eaa88b6bb,1723
+    subdir: biscuit-servant
+    git: https://github.com/biscuit-auth/biscuit-haskell.git
+    commit: 5c41a9b0b85b53962bdc33402af77f8c08fd1aa7
+- completed:
+    hackage: validation-selective-0.1.0.1@sha256:9a5aa8b801efc6a4ffb120e1b28e80c5f7d090043be56bba11222cd20c393044,3621
+    pantry-tree:
+      size: 696
+      sha256: bf72fe4304690da4b5bc6e5218b0f90b5613e7d658f3ce31731816a423fcbca6
+  original:
+    hackage: validation-selective-0.1.0.1
+- completed:
+    hackage: selective-0.4.2@sha256:d223434ba4545a09b02dbdc7a4d63bd41ef40cc3d3d82883ccc6daea9d2b2dd5,3507
+    pantry-tree:
+      size: 1160
+      sha256: 38f9abe506185137433e9620f702efc40aae7aaab8d3797ceb0b31fc3342ec32
+  original:
+    hackage: selective-0.4.2@sha256:d223434ba4545a09b02dbdc7a4d63bd41ef40cc3d3d82883ccc6daea9d2b2dd5,3507
 snapshots:
 - completed:
-    size: 586110
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/18/21.yaml
-    sha256: ce4fb8d44f3c6c6032060a02e0ebb1bd29937c9a70101c1517b92a87d9515160
-  original: lts-18.21
+    size: 616897
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/19/0.yaml
+    sha256: bbf2be02f17940bac1f87cb462d4fb0c3355de6dcfc53d84f4f9ad3ee2164f65
+  original: lts-19.0
