@@ -57,11 +57,13 @@ server :: Server API
 server b =
   let handlers = userListHandler :<|> singleUserHandler
       handleAuth = handleBiscuit b
-                 -- `allow if right(#authority, #admin);` will be the first policy for every endpoint
+                 -- `allow if right("admin");` will be the first policy for every endpoint
                  -- policies added by endpoints (or sub-apis) will be appended
                  . withPriorityAuthorizer [authorizer|allow if right("admin");|]
                  -- `deny if true;` will be the last policy for every endpoint
                  -- policies added by endpoints (or sub-apis) will be prepended
+                 -- since no matching policy makes authorization fail, `deny if true`
+                 -- as the last policy is redundant
                  . withFallbackAuthorizer [authorizer|deny if true;|]
    in hoistServer @ProtectedAPI Proxy handleAuth handlers
 
