@@ -32,7 +32,7 @@ library
   build-depends:
       aeson
     , base >=4.7 && <5
-    , biscuit-haskell
+    , biscuit-haskell ==0.1.1.0
     , biscuit-servant
     , bytestring
     , mtl
@@ -53,7 +53,7 @@ executable biscuit-app-exe
       aeson
     , base
     , biscuit-app
-    , biscuit-haskell
+    , biscuit-haskell ==0.1.1.0
     , biscuit-servant
     , bytestring
     , mtl
@@ -75,7 +75,7 @@ test-suite biscuit-app-test
       aeson
     , base
     , biscuit-app
-    , biscuit-haskell
+    , biscuit-haskell ==0.1.1.0
     , biscuit-servant
     , bytestring
     , hspec
